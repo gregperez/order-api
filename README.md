@@ -21,8 +21,8 @@ Este repositorio contiene una API REST sencilla para la gestión de órdenes, ju
 
 ### Clonar y correr
 ```bash
-git clone https://github.com/tu-usuario/orders-api-go.git
-cd orders-api-go
+git clone https://github.com/gregperez/order-api.git
+cd order-api
 go run main.go
 ```
 
@@ -34,7 +34,7 @@ La API estará disponible en: [http://localhost:8080](http://localhost:8080)
 
 | Método | Endpoint          | Descripción                    |
 |--------|-------------------|--------------------------------|
-| GET    | `/orders`         | Obtener todas las órdenes      |
+| GET    | `/order`         | Obtener todas las órdenes      |
 | GET    | `/order/{id}`     | Obtener una orden por ID       |
 | POST   | `/order`          | Crear una nueva orden          |
 | PUT    | `/order/{id}`     | Actualizar una orden existente |
@@ -76,7 +76,7 @@ ORDERS-API/
 ## ✍ Autor
 
 **Greg Perez**  
-📫 [gregperezm@email.com](mailto:gregperezm@email.com)  
+📫 [gregperezm@gmail.com](mailto:gregperezm@gmail.com)  
 🌍 Santiago, Chile
 
 ---
