@@ -1,5 +1,6 @@
 package utils
 
+// IsPalindrome verifica si un string es un palíndromo
 func IsPalindrome(s string) bool {
 	n := len(s)
 	if n == 0 {
