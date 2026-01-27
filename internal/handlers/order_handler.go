@@ -10,11 +10,11 @@ import (
 
 // OrderHandler maneja las peticiones HTTP relacionadas con órdenes
 type OrderHandler struct {
-	repo *repository.OrderRepository
+	repo repository.OrderRepositoryPort
 }
 
 // NewOrderHandler crea una nueva instancia del handler
-func NewOrderHandler(repo *repository.OrderRepository) *OrderHandler {
+func NewOrderHandler(repo repository.OrderRepositoryPort) *OrderHandler {
 	return &OrderHandler{repo: repo}
 }
 
