@@ -1,27 +1,38 @@
-### `.gitignore` para proyectos Go
-
-Crea un archivo llamado `.gitignore` en la raíz del proyecto con este contenido:
-
-```gitignore
 # Binaries
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+bin/
 
 # Test binary, build output
 *.test
 *.out
+coverage.txt
+coverage.html
 
 # IDE/Editor configs
 .vscode/
 .idea/
 *.swp
+*.swo
+*~
+
+# Logs
 *.log
+server.log
 
-# Dependency directories (remove the comment if you use vendoring)
-# vendor/
+# OS specific
+.DS_Store
+Thumbs.db
 
-# Go workspace files
-go.sum
+# Dependency directories
+vendor/
+
+# Legacy files (backup)
+*.legacy
+
+# Temporary files
+tmp/
+temp/
