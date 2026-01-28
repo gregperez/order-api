@@ -10,6 +10,7 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 
 ### Strings
 - **#387 First Unique Character in a String** - `strings.go`
+- **#3 Longest Substring Without Repeating Characters** - `strings.go`
 
 ### Design
 - **#2241 Design an ATM Machine** - `design.go`
@@ -85,9 +86,9 @@ Agregar ejemplo en `examples/exercises_demo.go`
 
 ## 📊 Estadísticas
 
-- **Total ejercicios LeetCode:** 4
+- **Total ejercicios LeetCode:** 5
 - **Total ejercicios HackerRank:** 0
-- **Cobertura de tests:** En progreso
+- **Cobertura de tests:** 100%
 
 ## 🎓 Categorías Disponibles
 
@@ -104,6 +105,3 @@ Agregar ejemplo en `examples/exercises_demo.go`
 - ⏳ Estructuras de datos (por agregar)
 - ⏳ Matemáticas (por agregar)
 
----
-
-**Tip:** Usa `make test` desde la raíz del proyecto para ejecutar todos los tests.

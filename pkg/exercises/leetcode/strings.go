@@ -28,3 +28,36 @@ func FirstUniqueChar(s string) *string {
 
 	return nil
 }
+
+/*
+LengthOfLongestSubstring encuentra la longitud de la subcadena sin caracteres repetidos más larga
+LeetCode #3: Longest Substring Without Repeating Characters
+*/
+func LengthOfLongestSubstring(s string) int {
+	// Mapa para guardar la última posición vista de cada carácter
+	charIndex := make(map[rune]int)
+
+	maxLen := 0
+	start := 0 // Inicio de la ventana
+
+	for i, char := range s {
+		// Si encontramos el carácter Y está dentro de la ventana actual
+		if lastIndex, exists := charIndex[char]; exists && lastIndex >= start {
+			// Mover el inicio de la ventana justo después del carácter duplicado
+			start = lastIndex + 1
+		}
+
+		// Actualizar la última posición de este carácter
+		charIndex[char] = i
+
+		// Calcular la longitud de la ventana actual [start, i]
+		currentLen := i - start + 1
+
+		// Actualizar máximo si encontramos una ventana más larga
+		if currentLen > maxLen {
+			maxLen = currentLen
+		}
+	}
+
+	return maxLen
+}
