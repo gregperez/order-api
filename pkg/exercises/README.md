@@ -15,6 +15,9 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 ### Design
 - **#2241 Design an ATM Machine** - `design.go`
 
+### Linked Lists
+- **#2 Add Two Numbers** - `linked_lists.go`
+
 ### Tests
 Todos los ejercicios tienen tests unitarios en `*_test.go`
 
@@ -97,7 +100,7 @@ Agregar ejemplo en `examples/exercises_demo.go`
 - ✅ Strings  
 - ✅ Design
 - ⏳ Trees (por agregar)
-- ⏳ Linked Lists (por agregar)
+- ✅ Linked Lists
 - ⏳ Dynamic Programming (por agregar)
 
 ### HackerRank

@@ -95,10 +95,7 @@ curl -X DELETE http://localhost:8080/order/1111
 
 ### LeetCode
 
-- **#1 Two Sum** - `pkg/exercises/leetcode/arrays.go`
-- **#387 First Unique Character** - `pkg/exercises/leetcode/strings.go`
-- **#1200 Minimum Absolute Difference** - `pkg/exercises/leetcode/arrays.go`
-- **#2241 Design ATM Machine** - `pkg/exercises/leetcode/design.go`
+- **Listado de ejercicios**: Revisar [pkg/exercises/leetcode/README.md](pkg/exercises/leetcode/README.md) para más detalles.
 
 ### HackerRank
 
