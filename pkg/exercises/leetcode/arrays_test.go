@@ -65,3 +65,24 @@ func TestMinimumAbsDifference(t *testing.T) {
 		})
 	}
 }
+
+func TestOtherFunctions(t *testing.T) {
+	tests := []struct {
+		name string
+		nums []int
+		k    int
+		want int
+	}{
+		{"Example 1", []int{3, 9, 7}, 5, 4},
+		{"Example 2", []int{4, 1, 3}, 4, 0},
+		{"Example 3", []int{3, 2}, 6, 5},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := MinOperations(tt.nums, tt.k)
+			if got != tt.want {
+				t.Errorf("MinOperations() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}

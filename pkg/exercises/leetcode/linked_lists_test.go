@@ -50,6 +50,49 @@ func TestLinkedList_AddTwoNumbers(t *testing.T) {
 	}
 }
 
+func TestLinkedList_ConvertDoublyLinkedListToArray(t *testing.T) {
+	tests := []struct {
+		name string
+		head *DoublyListNode
+		want []int
+	}{
+		{
+			name: "Test Case 1",
+			head: &DoublyListNode{Val: 1, Next: &DoublyListNode{Val: 2, Next: &DoublyListNode{Val: 3}}},
+			want: []int{1, 2, 3},
+		},
+		{
+			name: "Test Case 2",
+			head: nil,
+			want: []int{},
+		},
+		{
+			name: "Test Case 3",
+			head: &DoublyListNode{Val: 5},
+			want: []int{5},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := ConvertDoublyLinkedListToArray(tt.head); !equalSlices(got, tt.want) {
+				t.Errorf("ConvertDoublyLinkedListToArray() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func equalSlices(a, b []int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
+}
+
 func createList(vals []int) *ListNode {
 	if len(vals) == 0 {
 		return nil

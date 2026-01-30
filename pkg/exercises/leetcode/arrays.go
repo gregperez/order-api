@@ -46,3 +46,24 @@ func MinimumAbsDifference(arr []int) [][]int {
 
 	return result
 }
+
+// MinOperations número mínimo de operaciones para hacer la suma del arreglo divisible por K
+// LeetCode #3512: Minimum Number of Operations to Make Array Sum Divisible by K
+func MinOperations(nums []int, k int) int {
+	var sum int
+	for _, n := range nums {
+		sum += n
+	}
+
+	if sum%k == 0 {
+		return 0
+	}
+
+	operations := sum % k
+
+	if operations > sum {
+		return 0
+	}
+
+	return operations
+}

@@ -7,6 +7,7 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 ### Arrays
 - **#1 Two Sum** - `arrays.go`
 - **#1200 Minimum Absolute Difference** - `arrays.go`
+- **3512 Minimum Operations to Make Array Sum Divisible by K** - `arrays.go`
 
 ### Strings
 - **#387 First Unique Character in a String** - `strings.go`
@@ -17,6 +18,7 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 
 ### Linked Lists
 - **#2 Add Two Numbers** - `linked_lists.go`
+- **3363 Convert Doubly Linked List to Array** - `linked_lists.go`
 
 ### Tests
 Todos los ejercicios tienen tests unitarios en `*_test.go`
