@@ -6,6 +6,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type DoublyListNode struct {
+	Val  int
+	Next *DoublyListNode
+	Prev *DoublyListNode
+}
+
 // AddTwoNumbers suma dos números representados por listas enlazadas.
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	dummyHead := &ListNode{}
@@ -30,4 +36,15 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	return dummyHead.Next
+}
+
+// ConvertDoublyLinkedListToArray - Convertir doble lista enlazada a arreglo
+func ConvertDoublyLinkedListToArray(head *DoublyListNode) []int {
+	var result []int
+	current := head
+	for current != nil {
+		result = append(result, current.Val)
+		current = current.Next
+	}
+	return result
 }
