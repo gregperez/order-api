@@ -37,7 +37,7 @@ func MinimumAbsDifference(arr []int) [][]int {
 	}
 
 	// Recolectar todos los pares con la diferencia mínima
-	result := [][]int{}
+	var result [][]int
 	for i := 0; i < len(arr)-1; i++ {
 		if arr[i+1]-arr[i] == minDiff {
 			result = append(result, []int{arr[i], arr[i+1]})
@@ -66,4 +66,25 @@ func MinOperations(nums []int, k int) int {
 	}
 
 	return operations
+}
+
+// MinimumCost dividir un arreglo en subarreglos con costo mínimo
+// LeetCode #3010: Divide Array Into Subarrays With Minimum Cost
+func MinimumCost(nums []int) int {
+	n := len(nums)
+	if n == 0 {
+		return 0
+	}
+
+	if n == 3 {
+		return nums[0] + nums[1] + nums[2]
+	}
+
+	// the nums[0] is fixed. you have to find another two prefix of subarrays.
+	//sort the array from index 1 and return nums[0]+nums[1]+nums[2]
+	slices.Sort(nums[1:])
+
+	totalCost := nums[0] + nums[1] + nums[2]
+
+	return totalCost
 }

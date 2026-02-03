@@ -7,6 +7,7 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 ### Arrays
 - **#1 Two Sum** - `arrays.go`
 - **#1200 Minimum Absolute Difference** - `arrays.go`
+- **#3010 Divide Array Into Subarrays With Minimum Cost** - `arrays.go`
 - **3512 Minimum Operations to Make Array Sum Divisible by K** - `arrays.go`
 
 ### Strings
