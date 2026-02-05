@@ -61,3 +61,45 @@ func LengthOfLongestSubstring(s string) int {
 
 	return maxLen
 }
+
+/*
+LongestPalindrome encuentra la longitud del palíndromo más largo que se puede construir con las letras dadas
+LeetCode #5: Longest Palindrome Substring
+*/
+func LongestPalindrome(s string) string {
+	if len(s) < 2 {
+		return s
+	}
+
+	start, maxLen := 0, 0
+
+	expandAroundCenter := func(left, right int) int {
+		for left >= 0 && right < len(s) && s[left] == s[right] {
+			left--
+			right++
+		}
+		return right - left - 1
+	}
+
+	for i := 0; i < len(s); i++ {
+		// Palíndromos impares (centro en un carácter)
+		len1 := expandAroundCenter(i, i)
+		// Palíndromos pares (centro entre dos caracteres)
+		len2 := expandAroundCenter(i, i+1)
+
+		currentLen := maxLens(len1, len2)
+		if currentLen > maxLen {
+			maxLen = currentLen
+			start = i - (currentLen-1)/2
+		}
+	}
+
+	return s[start : start+maxLen]
+}
+
+func maxLens(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}

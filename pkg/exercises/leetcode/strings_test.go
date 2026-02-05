@@ -79,3 +79,26 @@ func TestLengthOfLongestSubstring_EdgeCases(t *testing.T) {
 func strPtr(s string) *string {
 	return &s
 }
+
+func TestLongestPalindrome(t *testing.T) {
+	tests := []struct {
+		name string
+		s    string
+		want string
+	}{
+		{"Example 1", "babad", "bab"},
+		{"Example 2", "cbbd", "bb"},
+		{"Example 3", "a", "a"},
+		{"Example 4", "ac", "a"},
+		{"Example 5", "racecar", "racecar"},
+		{"Example 6", "abb", "bb"},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := LongestPalindrome(tt.s); got != tt.want {
+				t.Errorf("LongestPalindrome() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
