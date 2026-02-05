@@ -95,7 +95,7 @@ curl -X DELETE http://localhost:8080/order/1111
 
 ### LeetCode
 
-- **Listado de ejercicios**: Revisar [pkg/exercises/leetcode/README.md](pkg/exercises/leetcode/README.md) para más detalles.
+- **Listado de ejercicios**: Revisar [pkg/exercises/README.md](pkg/exercises/README.md) para más detalles.
 
 ### HackerRank
 
