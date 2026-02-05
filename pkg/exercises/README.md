@@ -13,6 +13,7 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 ### Strings
 - **#387 First Unique Character in a String** - `strings.go`
 - **#3 Longest Substring Without Repeating Characters** - `strings.go`
+- **#5 Longest Palindromic Substring** - `strings.go`
 
 ### Design
 - **#2241 Design an ATM Machine** - `design.go`
