@@ -22,6 +22,9 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 - **#2 Add Two Numbers** - `linked_lists.go`
 - **3363 Convert Doubly Linked List to Array** - `linked_lists.go`
 
+### Integers
+- **#7 Reverse Integer** - `integers.go`
+
 ### Tests
 Todos los ejercicios tienen tests unitarios en `*_test.go`
 
