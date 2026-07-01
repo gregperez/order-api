@@ -24,3 +24,25 @@ func TestReverse(test *testing.T) {
 		})
 	}
 }
+
+func TestIsPalindrome(test *testing.T) {
+	tests := []struct {
+		name     string
+		input    int
+		expected bool
+	}{
+		{"Palindrome 121", 121, true},
+		{"Not a palindrome -121", -121, false},
+		{"Not a palindrome 10", 10, false},
+		{"Palindrome 12321", 12321, true},
+	}
+
+	for _, tc := range tests {
+		test.Run(tc.name, func(t *testing.T) {
+			result := IsPalindrome(tc.input)
+			if result != tc.expected {
+				t.Errorf("IsPalindrome(%d) = %v; expected %v", tc.input, result, tc.expected)
+			}
+		})
+	}
+}

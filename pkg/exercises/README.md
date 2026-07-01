@@ -24,6 +24,7 @@ Este directorio contiene soluciones organizadas a problemas de plataformas de co
 
 ### Integers
 - **#7 Reverse Integer** - `integers.go`
+- **#9 IsPalindrome Number** - `integers.go`
 
 ### Tests
 Todos los ejercicios tienen tests unitarios en `*_test.go`

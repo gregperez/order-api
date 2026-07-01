@@ -37,6 +37,26 @@ func Reverse(x int) int {
 	return result
 }
 
+/*
+IsPalindrome verifica si un entero es palíndromo
+LeetCode #9: Palindrome Number
+*/
+func IsPalindrome(x int) bool {
+	if x < 0 {
+		return false
+	}
+	original := x
+	reversed := 0
+
+	for x > 0 {
+		digit := x % 10
+		reversed = reversed*10 + digit
+		x /= 10
+	}
+
+	return original == reversed
+}
+
 func arrayToInt(arr []int) (int, error) {
 	strArr := make([]string, len(arr))
 	for i, v := range arr {
